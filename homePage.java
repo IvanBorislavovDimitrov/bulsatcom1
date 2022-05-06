@@ -13,18 +13,17 @@ public class homePage {
 
 
     public homePage() {
-        homeFrame = new JFrame();
         channelsButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                channels channelFrame  = new channels();
+                homeFrame.dispose();
+                new channels();
             }
-
         });
     }
 
     public static void main(String[] args) {
-        JFrame homeFrame = new JFrame("Home Page");
+        homeFrame = new JFrame("Home Page");
         homeFrame.setContentPane(new homePage().homePanel);
         homeFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         homeFrame.pack();

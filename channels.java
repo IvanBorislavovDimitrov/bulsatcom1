@@ -18,18 +18,22 @@ public class channels extends JDialog{
     private static JFrame channelFrame;
 
     public static void main(String[] args) {
-        JFrame channelFrame = new JFrame("channels");
-        channelFrame.setContentPane(new channels().channelsPanel);
+//        JFrame channelFrame = new JFrame("channels");
+//        channelFrame.setContentPane(new channels().channelsPanel);
+//        channelFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+//        channelFrame.pack();
+//        channelFrame.setVisible(true);
+    }
+    public channels(){
+
+        Connect();
+
+        channelFrame = new JFrame("channels");
+        channelFrame.setContentPane(channelsPanel);
         channelFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         channelFrame.pack();
         channelFrame.setVisible(true);
-    }
-    public channels(){
-        Connect();
 
-
-        channelFrame = new JFrame();
-        channelFrame.setVisible(true);
 
         saveButton.addActionListener(new ActionListener() {
             @Override
